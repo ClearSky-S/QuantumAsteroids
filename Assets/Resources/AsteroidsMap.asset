@@ -43,25 +43,25 @@ MonoBehaviour:
   StaticColliders3D: []
   MapEntities:
   - Components:
-    - rid: 2017105476881219584
-    - rid: 2017105476881219585
-    - rid: 2017105476881219586
-    - rid: 2017105476881219587
+    - rid: 8011482731512856576
+    - rid: 8011482731512856577
+    - rid: 8011482731512856578
+    - rid: 8011482731512856579
   SerializedTriangleDataUncompressedSize: 8
   references:
     version: 2
     RefIds:
-    - rid: 2017105476881219584
+    - rid: 8011482731512856576
       type: {class: Transform2DPrototype, ns: Quantum.Prototypes, asm: Quantum.Engine}
       data:
         Position:
           X:
-            RawValue: 0
+            RawValue: -148766
           Y:
-            RawValue: 0
+            RawValue: 79953
         Rotation:
           RawValue: 0
-    - rid: 2017105476881219585
+    - rid: 8011482731512856577
       type: {class: PhysicsCollider2DPrototype, ns: Quantum.Prototypes, asm: Quantum.Engine}
       data:
         ShapeConfig:
@@ -98,7 +98,7 @@ MonoBehaviour:
         PhysicsMaterial:
           Id:
             Value: 0
-    - rid: 2017105476881219586
+    - rid: 8011482731512856578
       type: {class: PhysicsBody2DPrototype, ns: Quantum.Prototypes, asm: Quantum.Engine}
       data:
         Config:
@@ -118,7 +118,7 @@ MonoBehaviour:
           _hasValue: 0
           _value:
             RawValue: 65536
-    - rid: 2017105476881219587
+    - rid: 8011482731512856579
       type: {class: PhysicsCallbacks2DPrototype, ns: Quantum.Prototypes, asm: Quantum.Engine}
       data:
         CallbackFlags:

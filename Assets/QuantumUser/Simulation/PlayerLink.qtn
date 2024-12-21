@@ -1,0 +1,4 @@
+component PlayerLink
+{
+    player_ref PlayerRef;
+}
