@@ -11,6 +11,7 @@ namespace Quantum.Asteroids
             public EntityRef Entity;
             public Transform2D* Transform;
             public PhysicsBody2D* Body;
+            public AsteroidsShip* AsteroidsShip;
         }
         public override void Update(Frame f, ref Filter filter)
         {

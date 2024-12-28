@@ -41,85 +41,8 @@ MonoBehaviour:
   Regions: []
   StaticColliders2D: []
   StaticColliders3D: []
-  MapEntities:
-  - Components:
-    - rid: 8011482731512856576
-    - rid: 8011482731512856577
-    - rid: 8011482731512856578
-    - rid: 8011482731512856579
+  MapEntities: []
   SerializedTriangleDataUncompressedSize: 8
   references:
     version: 2
-    RefIds:
-    - rid: 8011482731512856576
-      type: {class: Transform2DPrototype, ns: Quantum.Prototypes, asm: Quantum.Engine}
-      data:
-        Position:
-          X:
-            RawValue: -148766
-          Y:
-            RawValue: 79953
-        Rotation:
-          RawValue: 0
-    - rid: 8011482731512856577
-      type: {class: PhysicsCollider2DPrototype, ns: Quantum.Prototypes, asm: Quantum.Engine}
-      data:
-        ShapeConfig:
-          ShapeType: 1
-          PolygonCollider:
-            Id:
-              Value: 0
-          CircleRadius:
-            RawValue: 32768
-          CapsuleSize:
-            X:
-              RawValue: 0
-            Y:
-              RawValue: 0
-          EdgeExtent:
-            RawValue: 0
-          BoxExtents:
-            X:
-              RawValue: 0
-            Y:
-              RawValue: 0
-          PositionOffset:
-            X:
-              RawValue: 0
-            Y:
-              RawValue: 0
-          RotationOffset:
-            RawValue: 0
-          UserTag: 0
-          IsPersistent: 1
-          CompoundShapes: []
-        Layer: 0
-        IsTrigger: 0
-        PhysicsMaterial:
-          Id:
-            Value: 0
-    - rid: 8011482731512856578
-      type: {class: PhysicsBody2DPrototype, ns: Quantum.Prototypes, asm: Quantum.Engine}
-      data:
-        Config:
-          Value: 116
-        Mass:
-          RawValue: 65536
-        Drag:
-          RawValue: 32768
-        AngularDrag:
-          RawValue: 32768
-        CenterOfMass:
-          X:
-            RawValue: 0
-          Y:
-            RawValue: 0
-        GravityScale:
-          _hasValue: 0
-          _value:
-            RawValue: 65536
-    - rid: 8011482731512856579
-      type: {class: PhysicsCallbacks2DPrototype, ns: Quantum.Prototypes, asm: Quantum.Engine}
-      data:
-        CallbackFlags:
-          Value: 0
+    RefIds: []
