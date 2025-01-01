@@ -49,6 +49,21 @@ namespace Quantum.Prototypes.Unity {
   using RuntimeInitializeOnLoadMethodAttribute = UnityEngine.RuntimeInitializeOnLoadMethodAttribute;
   #endif //;
   
+  [System.SerializableAttribute()]
+  public unsafe partial class AsteroidsProjectilePrototype : Quantum.QuantumUnityPrototypeAdapter<Quantum.Prototypes.AsteroidsProjectilePrototype> {
+    public FP TTL;
+    public Quantum.QuantumEntityPrototype Owner;
+    public AssetRef<AsteroidsProjectileConfig> ProjectileConfig;
+    partial void ConvertUser(Quantum.QuantumEntityPrototypeConverter converter, ref Quantum.Prototypes.AsteroidsProjectilePrototype prototype);
+    public override Quantum.Prototypes.AsteroidsProjectilePrototype Convert(Quantum.QuantumEntityPrototypeConverter converter) {
+      var result = new Quantum.Prototypes.AsteroidsProjectilePrototype();
+      converter.Convert(this.TTL, out result.TTL);
+      converter.Convert(this.Owner, out result.Owner);
+      converter.Convert(this.ProjectileConfig, out result.ProjectileConfig);
+      ConvertUser(converter, ref result);
+      return result;
+    }
+  }
 }
 #pragma warning restore 0109
 #pragma warning restore 1591

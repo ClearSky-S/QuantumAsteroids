@@ -50,10 +50,27 @@ namespace Quantum.Prototypes {
   #endif //;
   
   [System.SerializableAttribute()]
+  [Quantum.Prototypes.Prototype(typeof(Quantum.AsteroidsProjectile))]
+  public unsafe class AsteroidsProjectilePrototype : ComponentPrototype<Quantum.AsteroidsProjectile> {
+    public FP TTL;
+    public MapEntityId Owner;
+    public AssetRef<AsteroidsProjectileConfig> ProjectileConfig;
+    public override Boolean AddToEntity(FrameBase f, EntityRef entity, in PrototypeMaterializationContext context) {
+        Quantum.AsteroidsProjectile component = default;
+        Materialize((Frame)f, ref component, in context);
+        return f.Set(entity, component) == SetResult.ComponentAdded;
+    }
+    public void Materialize(Frame frame, ref Quantum.AsteroidsProjectile result, in PrototypeMaterializationContext context = default) {
+        result.TTL = this.TTL;
+        PrototypeValidator.FindMapEntity(this.Owner, in context, out result.Owner);
+        result.ProjectileConfig = this.ProjectileConfig;
+    }
+  }
+  [System.SerializableAttribute()]
   [Quantum.Prototypes.Prototype(typeof(Quantum.AsteroidsShip))]
   public unsafe partial class AsteroidsShipPrototype : ComponentPrototype<Quantum.AsteroidsShip> {
-    [HideInInspector()]
-    public Int32 _empty_prototype_dummy_field_;
+    public AssetRef<AsteroidsShipConfig> ShipConfig;
+    public FP FireInterval;
     partial void MaterializeUser(Frame frame, ref Quantum.AsteroidsShip result, in PrototypeMaterializationContext context);
     public override Boolean AddToEntity(FrameBase f, EntityRef entity, in PrototypeMaterializationContext context) {
         Quantum.AsteroidsShip component = default;
@@ -61,6 +78,8 @@ namespace Quantum.Prototypes {
         return f.Set(entity, component) == SetResult.ComponentAdded;
     }
     public void Materialize(Frame frame, ref Quantum.AsteroidsShip result, in PrototypeMaterializationContext context = default) {
+        result.ShipConfig = this.ShipConfig;
+        result.FireInterval = this.FireInterval;
         MaterializeUser(frame, ref result, in context);
     }
   }
