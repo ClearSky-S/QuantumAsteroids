@@ -50,6 +50,21 @@ namespace Quantum.Prototypes {
   #endif //;
   
   [System.SerializableAttribute()]
+  [Quantum.Prototypes.Prototype(typeof(Quantum.AsteroidsAsteroid))]
+  public unsafe partial class AsteroidsAsteroidPrototype : ComponentPrototype<Quantum.AsteroidsAsteroid> {
+    public AssetRef<EntityPrototype> ChildAsteroid;
+    partial void MaterializeUser(Frame frame, ref Quantum.AsteroidsAsteroid result, in PrototypeMaterializationContext context);
+    public override Boolean AddToEntity(FrameBase f, EntityRef entity, in PrototypeMaterializationContext context) {
+        Quantum.AsteroidsAsteroid component = default;
+        Materialize((Frame)f, ref component, in context);
+        return f.Set(entity, component) == SetResult.ComponentAdded;
+    }
+    public void Materialize(Frame frame, ref Quantum.AsteroidsAsteroid result, in PrototypeMaterializationContext context = default) {
+        result.ChildAsteroid = this.ChildAsteroid;
+        MaterializeUser(frame, ref result, in context);
+    }
+  }
+  [System.SerializableAttribute()]
   [Quantum.Prototypes.Prototype(typeof(Quantum.AsteroidsProjectile))]
   public unsafe class AsteroidsProjectilePrototype : ComponentPrototype<Quantum.AsteroidsProjectile> {
     public FP TTL;

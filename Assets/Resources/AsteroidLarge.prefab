@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 2736467545268439783}
   - component: {fileID: 8753491172465674455}
   - component: {fileID: 960184520917482115}
+  - component: {fileID: 3387562742246100344}
   m_Layer: 0
   m_Name: AsteroidLarge
   m_TagString: Untagged
@@ -208,7 +209,7 @@ MonoBehaviour:
     LayerSource: 0
     Layer: 0
     CallbackFlags:
-      Value: 0
+      Value: 2
   PhysicsBody:
     IsEnabled: 1
     Config2D: 116
@@ -303,3 +304,19 @@ MonoBehaviour:
   OnEntityDestroyed:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3387562742246100344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2929252740472009660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc306915173d0634d9fdf0c8225b946e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Prototype:
+    ChildAsteroid:
+      Id:
+        Value: 1497028778458721837

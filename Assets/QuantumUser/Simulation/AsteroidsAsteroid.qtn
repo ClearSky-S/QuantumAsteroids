@@ -1,0 +1,6 @@
+component AsteroidsAsteroid
+{
+    asset_ref<EntityPrototype> ChildAsteroid;
+}
+
+signal SpawnAsteroid(AssetRef<EntityPrototype> childPrototype, EntityRef parent);

@@ -1,0 +1,5 @@
+﻿signal OnCollisionProjectileHitShip(CollisionInfo2D info, AsteroidsProjectile* projectile, AsteroidsShip* ship);
+
+signal OnCollisionProjectileHitAsteroid(CollisionInfo2D info, AsteroidsProjectile* projectile, AsteroidsAsteroid* asteroid);
+
+signal OnCollisionAsteroidHitShip(CollisionInfo2D info, AsteroidsShip* ship, AsteroidsAsteroid* asteroid);

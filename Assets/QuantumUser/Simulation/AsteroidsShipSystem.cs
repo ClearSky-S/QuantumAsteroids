@@ -4,7 +4,7 @@ using UnityEngine.Scripting;
 namespace Quantum.Asteroids
 {
     [Preserve]
-    public unsafe class AsteroidsShipSystem : SystemMainThreadFilter<AsteroidsShipSystem.Filter>
+    public unsafe class AsteroidsShipSystem : SystemMainThreadFilter<AsteroidsShipSystem.Filter>, ISignalOnCollisionAsteroidHitShip 
     {
         public struct Filter
         {
@@ -63,6 +63,10 @@ namespace Quantum.Asteroids
             {
                 filter.AsteroidsShip->FireInterval -= f.DeltaTime;
             }
+        }
+        public void OnCollisionAsteroidHitShip(Frame f, CollisionInfo2D info, AsteroidsShip* ship, AsteroidsAsteroid* asteroid)
+        {
+            f.Destroy(info.Entity);
         }
     }
 }
